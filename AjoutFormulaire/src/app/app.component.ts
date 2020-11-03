@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public fruit: string;
-  public fruits :string[] = [];
+  public fruits: string[] = [];
+  
+
+  SupprimeFruit(fruit:string) {
+    this.fruits.splice(this.fruits.indexOf(fruit), 1);
+    
+  }
 }
 

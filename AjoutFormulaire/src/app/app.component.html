@@ -2,13 +2,13 @@
     <div class='col-6 mx-auto'>
         <div class="row" style="margin-top:150px">
             <input type="text" class="form-control col-9" [(ngModel)]="fruit" />
-            <button class="btn btn-primary col-3" (click)="fruits.push(fruit)">Ajouter</button>
+            <button class="btn btn-info col-3" (click)="fruits.push(fruit)">Ajouter</button>
         </div>
     </div>
 </div>
 
 <div class="row" style="margin-top:100px">
     <ul class="list-group list-group-flush col-8 mx-auto">
-        <app-exemple *ngFor="let f of fruits" [fruit]="f"></app-exemple>
+        <app-exemple *ngFor="let f of fruits" [fruit]="f" (SupprimF)="SupprimeFruit($event)"></app-exemple>
     </ul>
 </div>

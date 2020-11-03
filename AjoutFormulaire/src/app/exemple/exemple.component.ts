@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-exemple',
@@ -7,9 +7,20 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class ExempleComponent implements OnInit {
   @Input('fruit') public fruit: string;
+  
+  @Output() public SupprimF: EventEmitter<string> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  SupprimeFruit() {
+    this.SupprimF.emit(this.fruit);
+
+
+  }
+
+
 
 }

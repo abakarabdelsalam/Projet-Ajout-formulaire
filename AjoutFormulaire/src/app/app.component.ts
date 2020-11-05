@@ -16,8 +16,8 @@ export class AppComponent {
   }
 
   FonctionRef(reference: any) {
-    console.log(reference.type);
-    console.log(reference.value);
+    console.log(reference.type, reference.value);
+    
     this.fruits.push(reference.value);
 
 
